@@ -171,6 +171,7 @@ footer p { font-size: 12px; color: var(--text3); }
     <div class="section-line"></div>
   </div>
   <div class="projects-grid">
+
     <div class="project-card featured">
       <div class="project-card-top"><span class="project-type">Apex + LWC</span><span class="badge badge-live">✓ Live</span></div>
       <h3 class="project-name">Account Health Dashboard</h3>
@@ -178,36 +179,43 @@ footer p { font-size: 12px; color: var(--text3); }
       <div class="tags"><span class="tag">Apex</span><span class="tag">LWC</span><span class="tag">SOQL</span><span class="tag">Wire Service</span><span class="tag">FlexiPage</span><span class="tag">SFDX</span></div>
       <a href="https://github.com/rsantiago76/Salesforce-account-health-dashboard" target="_blank" class="project-link">View on GitHub →</a>
     </div>
+
+    <div class="project-card">
+      <div class="project-card-top"><span class="project-type">Apex + Triggers + LWC</span><span class="badge badge-live">✓ Live</span></div>
+      <h3 class="project-name">Case Escalation Engine</h3>
+      <p class="project-desc">Automated SLA enforcement system with an Apex trigger, scheduled Batch Apex job, and LWC management console. Cases exceeding SLA thresholds are auto-escalated. Managers can de-escalate with audit trail logging.</p>
+      <div class="tags"><span class="tag">Apex Triggers</span><span class="tag">Batch Apex</span><span class="tag">LWC</span><span class="tag">SOQL</span><span class="tag">SFDX</span></div>
+      <a href="https://github.com/rsantiago76/Salesforce-case-escalation-engine" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+
     <div class="project-card">
       <div class="project-card-top"><span class="project-type">Integration</span><span class="badge badge-soon">In Progress</span></div>
       <h3 class="project-name">Bidirectional ERP Sync</h3>
       <p class="project-desc">Platform Events-driven sync between Salesforce and a mock ERP system. Handles upserts, conflict resolution, error queues, and retry logic with dead-letter logging.</p>
       <div class="tags"><span class="tag">Platform Events</span><span class="tag">REST API</span><span class="tag">Apex</span><span class="tag">Error Handling</span></div>
     </div>
+
     <div class="project-card">
       <div class="project-card-top"><span class="project-type">DevOps</span><span class="badge badge-soon">In Progress</span></div>
       <h3 class="project-name">CI/CD Pipeline</h3>
       <p class="project-desc">Full SFDX source-driven repo with GitHub Actions: scratch org creation, Apex test runs, PMD static analysis, and automated deployment to sandbox on merge to main.</p>
       <div class="tags"><span class="tag">Salesforce DX</span><span class="tag">GitHub Actions</span><span class="tag">Scratch Orgs</span><span class="tag">PMD</span></div>
     </div>
+
     <div class="project-card">
       <div class="project-card-top"><span class="project-type">OmniStudio · PSF</span><span class="badge badge-soon">In Progress</span></div>
       <h3 class="project-name">Service Intake OmniScript</h3>
       <p class="project-desc">Multi-step guided intake flow for public sector workflows using OmniScript, Data Raptors, and FlexCards on the Public Sector Foundation platform.</p>
       <div class="tags"><span class="tag teal">OmniScript</span><span class="tag teal">Data Raptor</span><span class="tag teal">FlexCards</span><span class="tag teal">PSF</span></div>
     </div>
+
     <div class="project-card">
       <div class="project-card-top"><span class="project-type">AI + LWC</span><span class="badge badge-soon">Planned</span></div>
       <h3 class="project-name">Prompt-to-SOQL Generator</h3>
       <p class="project-desc">LWC that takes plain-English questions, sends them to an AI API via Apex callout, generates and executes SOQL, and renders results — demonstrating AI-assisted development workflow.</p>
       <div class="tags"><span class="tag gold">LWC</span><span class="tag gold">Apex Callouts</span><span class="tag gold">AI APIs</span><span class="tag gold">SOQL</span></div>
     </div>
-    <div class="project-card">
-      <div class="project-card-top"><span class="project-type">Apex + Bulk API</span><span class="badge badge-soon">Planned</span></div>
-      <h3 class="project-name">Bulk Data Migration Tool</h3>
-      <p class="project-desc">Apex + Bulk API pipeline for migrating large record volumes with deduplication logic, field mapping, and a progress-tracking LWC component. Demonstrates data volume awareness.</p>
-      <div class="tags"><span class="tag">Bulk API</span><span class="tag">Batch Apex</span><span class="tag">LWC</span><span class="tag">Data Quality</span></div>
-    </div>
+
   </div>
 </section>
 
