@@ -102,4 +102,230 @@ h1 em { font-style: normal; color: var(--sf-blue); }
 .contact-headline span { color: var(--sf-blue); }
 .contact-sub { color: var(--text2); line-height: 1.8; font-size: 13px; }
 .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
-.contact-row { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border: 1px solid var(--border);
+.contact-row { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: border-color 0.2s, background 0.2s; }
+.contact-row:hover { border-color: var(--sf-blue); background: #f0f8ff; }
+.contact-row-left { display: flex; flex-direction: column; gap: 2px; }
+.contact-row-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text3); }
+.contact-row-value { font-size: 13px; color: var(--sf-navy); font-weight: 500; }
+.contact-arrow { color: var(--sf-blue); font-size: 18px; }
+footer { border-top: 1px solid var(--border); padding: 1.5rem 2.5rem; display: flex; justify-content: space-between; align-items: center; background: var(--bg2); }
+footer p { font-size: 12px; color: var(--text3); }
+.footer-status { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text3); }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sf-teal); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+@media (max-width: 700px) {
+  nav { padding: 1rem 1.25rem; }
+  .hero { padding: 3.5rem 1.25rem 2.5rem; }
+  .stats { grid-template-columns: repeat(2,1fr); }
+  .section { padding: 3rem 1.25rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .nav-links { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand">RS<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://github.com/rsantiago76" target="_blank" class="cta">GitHub ↗</a></li>
+    <li><a href="https://www.salesforce.com/trailblazer/ew1493yn43lni5gwiz" target="_blank">Trailhead ↗</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Salesforce Developer Portfolio</div>
+    <h1>RICHARD <em>SANTIAGO</em></h1>
+    <p class="hero-role">Senior Salesforce Developer · Technical Lead · OmniStudio Specialist</p>
+    <p class="hero-desc">5+ years building enterprise Salesforce solutions — custom Apex engines, Lightning Web Components, OmniStudio flows, and REST/SOAP integrations. U.S. Navy veteran. I write code that ships, scales, and makes sense to the next developer.</p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn btn-primary">View Projects →</a>
+      <a href="mailto:santiago.ricardo@gmail.com" class="btn btn-outline">Get In Touch</a>
+    </div>
+    <div class="hero-links">
+      <a href="https://github.com/rsantiago76" target="_blank">⟶ GitHub</a>
+      <a href="https://www.salesforce.com/trailblazer/ew1493yn43lni5gwiz" target="_blank">⟶ Trailhead</a>
+      <a href="https://www.linkedin.com/in/richardsantiago01" target="_blank">⟶ LinkedIn</a>
+      <a href="mailto:santiago.ricardo@gmail.com">⟶ santiago.ricardo@gmail.com</a>
+      <a href="tel:+17573241977">⟶ (757) 324-1977</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years Salesforce</span></div>
+  <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years OmniStudio</span></div>
+  <div class="stat"><span class="stat-num">4</span><span class="stat-label">Certifications</span></div>
+  <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Integrations Built</span></div>
+</div>
+
+<section class="section" id="projects">
+  <div class="section-header">
+    <span class="section-tag">01</span>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card featured">
+      <div class="project-card-top"><span class="project-type">Apex + LWC</span><span class="badge badge-live">✓ Live</span></div>
+      <h3 class="project-name">Account Health Dashboard</h3>
+      <p class="project-desc">Real-time Account health scoring engine. Calculates a 0–100 score from open cases, recent opportunities, and activity recency. Deployed to a Salesforce Developer org via Salesforce DX with full source-driven development.</p>
+      <div class="tags"><span class="tag">Apex</span><span class="tag">LWC</span><span class="tag">SOQL</span><span class="tag">Wire Service</span><span class="tag">FlexiPage</span><span class="tag">SFDX</span></div>
+      <a href="https://github.com/rsantiago76/Salesforce-account-health-dashboard" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-top"><span class="project-type">Apex + Triggers + LWC</span><span class="badge badge-live">✓ Live</span></div>
+      <h3 class="project-name">Case Escalation Engine</h3>
+      <p class="project-desc">Automated SLA enforcement system with an Apex trigger, scheduled Batch Apex job, and LWC management console. Cases exceeding SLA thresholds are auto-escalated. Managers can de-escalate with audit trail logging.</p>
+      <div class="tags"><span class="tag">Apex Triggers</span><span class="tag">Batch Apex</span><span class="tag">LWC</span><span class="tag">SOQL</span><span class="tag">SFDX</span></div>
+      <a href="https://github.com/rsantiago76/Salesforce-case-escalation-engine" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-top"><span class="project-type">Platform Events + REST API</span><span class="badge badge-live">✓ Live</span></div>
+      <h3 class="project-name">Bidirectional ERP Sync</h3>
+      <p class="project-desc">Real-time Order sync to a mock ERP via Platform Events and REST callouts. Includes retry logic, dead-letter logging to SyncLog__c, and an LWC monitor dashboard with retry capability.</p>
+      <div class="tags"><span class="tag">Platform Events</span><span class="tag">REST API</span><span class="tag">Apex</span><span class="tag">LWC</span><span class="tag">Custom Objects</span></div>
+      <a href="https://github.com/rsantiago76/Salesforce-erp-sync" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-top"><span class="project-type">DevOps</span><span class="badge badge-live">✓ Live</span></div>
+      <h3 class="project-name">CI/CD Pipeline</h3>
+      <p class="project-desc">Production-grade CI/CD pipeline using GitHub Actions and Salesforce CLI. Runs PMD static analysis, deploys metadata on push to main, enforces Apex test coverage, and posts deployment summaries — fully automated from commit to org.</p>
+      <div class="tags"><span class="tag">Salesforce DX</span><span class="tag">GitHub Actions</span><span class="tag">PMD</span><span class="tag">Apex</span><span class="tag">SFDX Auth</span></div>
+      <a href="https://github.com/rsantiago76/Salesforce-cicd-pipeline" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-top"><span class="project-type">AI + LWC</span><span class="badge badge-soon">In Progress</span></div>
+      <h3 class="project-name">Prompt-to-SOQL Generator</h3>
+      <p class="project-desc">LWC that takes plain-English questions, sends them to an AI API via Apex callout, generates and executes SOQL, and renders results — demonstrating AI-assisted development workflow.</p>
+      <div class="tags"><span class="tag gold">LWC</span><span class="tag gold">Apex Callouts</span><span class="tag gold">AI APIs</span><span class="tag gold">SOQL</span></div>
+      <a href="https://github.com/rsantiago76/Salesforce-prompt-to-soql" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="section-header">
+    <span class="section-tag">02</span>
+    <h2 class="section-title">Core Skills</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-group"><p class="skill-group-title">Programmatic Dev</p><ul class="skill-list"><li>Apex & Batch Apex</li><li>Lightning Web Components (LWC)</li><li>SOQL / SOSL</li><li>Visualforce</li><li>Triggers & Platform Events</li></ul></div>
+    <div class="skill-group"><p class="skill-group-title">OmniStudio</p><ul class="skill-list"><li>OmniScript</li><li>Data Raptor</li><li>FlexCards</li><li>Vlocity / OmniStudio</li><li>Public Sector Foundation</li></ul></div>
+    <div class="skill-group"><p class="skill-group-title">Integrations</p><ul class="skill-list"><li>REST & SOAP APIs</li><li>Bulk API</li><li>Named Credentials</li><li>MuleSoft</li><li>Platform Events</li></ul></div>
+    <div class="skill-group"><p class="skill-group-title">DevOps & AI</p><ul class="skill-list"><li>Salesforce DX</li><li>GitHub Actions / CI/CD</li><li>Claude Code</li><li>GitHub Copilot</li><li>PMD Static Analysis</li></ul></div>
+    <div class="skill-group"><p class="skill-group-title">Declarative Tools</p><ul class="skill-list"><li>Flow Builder</li><li>Validation Rules</li><li>Roles & Profiles</li><li>Reports & Dashboards</li><li>Process Builder</li></ul></div>
+    <div class="skill-group"><p class="skill-group-title">Architecture</p><ul class="skill-list"><li>Governor Limit Design</li><li>Security Model</li><li>Data Volume Strategy</li><li>Solution Architecture</li><li>Technical Leadership</li></ul></div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="section-header">
+    <span class="section-tag">03</span>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="exp-list">
+    <div class="exp-item">
+      <div class="exp-header"><div class="exp-role">Senior Salesforce Developer</div><div class="exp-date">2022 – Present</div></div>
+      <div class="exp-company">IT-STRAT · Enterprise / Federal</div>
+      <ul class="exp-bullets">
+        <li>Led design and delivery of OmniStudio PSF solutions including OmniScripts, Data Raptors, and FlexCards for public sector client workflows.</li>
+        <li>Built REST/SOAP integrations between Salesforce and core financial platforms, data warehouses, and marketing tools — 20+ integrations delivered.</li>
+        <li>Drove CI/CD adoption using Salesforce DX + GitHub Actions, reducing deployment errors and accelerating release cycles.</li>
+        <li>Integrated AI coding assistants (Claude Code, GitHub Copilot) into daily development workflow to accelerate debugging and code review.</li>
+        <li>Mentored junior developers on Apex best practices, governor limits, and security model.</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <div class="exp-header"><div class="exp-role">Salesforce Developer</div><div class="exp-date">2020 – 2022</div></div>
+      <div class="exp-company">By Light Professional IT Services</div>
+      <ul class="exp-bullets">
+        <li>Developed custom Apex triggers, batch jobs, and LWC components for Sales Cloud and Service Cloud implementations.</li>
+        <li>Handled data migrations of 2M+ records using Bulk API and Data Loader with zero downtime.</li>
+        <li>Built and maintained REST API integrations with external enterprise systems.</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <div class="exp-header"><div class="exp-role">IT Systems Administrator</div><div class="exp-date">2014 – 2020</div></div>
+      <div class="exp-company">U.S. Navy · Federal / Mission-Critical IT</div>
+      <ul class="exp-bullets">
+        <li>Supported secure enterprise systems, user access management, training, and system reliability in mission-focused environments.</li>
+        <li>Managed enterprise collaboration tools and IT infrastructure for distributed teams.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <span class="section-tag">04</span>
+    <h2 class="section-title">Certifications</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="certs-grid">
+    <div class="cert-item"><div class="cert-icon">🏅</div><div><div class="cert-name">Platform Developer II</div><div class="cert-org">Salesforce</div></div></div>
+    <div class="cert-item"><div class="cert-icon">🏅</div><div><div class="cert-name">OmniStudio Developer</div><div class="cert-org">Salesforce</div></div></div>
+    <div class="cert-item"><div class="cert-icon">🏅</div><div><div class="cert-name">Application Architect</div><div class="cert-org">Salesforce</div></div></div>
+    <div class="cert-item"><div class="cert-icon">🏅</div><div><div class="cert-name">Platform Developer I</div><div class="cert-org">Salesforce</div></div></div>
+    <div class="cert-item"><div class="cert-icon">☁️</div><div><div class="cert-name">AWS Cloud Practitioner</div><div class="cert-org">Amazon Web Services</div></div></div>
+    <div class="cert-item"><div class="cert-icon">🔐</div><div><div class="cert-name">PMP / CISM / CASP+</div><div class="cert-org">PMI / ISACA / CompTIA</div></div></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-header">
+    <span class="section-tag">05</span>
+    <h2 class="section-title">Contact</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <h3 class="contact-headline">Open to <span>Salesforce</span> roles. Let's talk.</h3>
+      <p class="contact-sub">Available for Senior Developer, Technical Lead, and Architect-level roles. Remote or hybrid preferred. Based in Wake Forest, NC.<br><br>U.S. Navy veteran with federal and enterprise Salesforce experience. Resume and live demos available upon request.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:santiago.ricardo@gmail.com" class="contact-row">
+        <div class="contact-row-left"><span class="contact-row-label">Email</span><span class="contact-row-value">santiago.ricardo@gmail.com</span></div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="tel:+17573241977" class="contact-row">
+        <div class="contact-row-left"><span class="contact-row-label">Phone</span><span class="contact-row-value">(757) 324-1977</span></div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://www.linkedin.com/in/richardsantiago01" target="_blank" class="contact-row">
+        <div class="contact-row-left"><span class="contact-row-label">LinkedIn</span><span class="contact-row-value">linkedin.com/in/richardsantiago01</span></div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://github.com/rsantiago76" target="_blank" class="contact-row">
+        <div class="contact-row-left"><span class="contact-row-label">GitHub</span><span class="contact-row-value">github.com/rsantiago76</span></div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://www.salesforce.com/trailblazer/ew1493yn43lni5gwiz" target="_blank" class="contact-row">
+        <div class="contact-row-left"><span class="contact-row-label">Trailhead</span><span class="contact-row-value">salesforce.com/trailblazer/profile</span></div>
+        <span class="contact-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Richard Santiago · Salesforce Developer Portfolio</p>
+  <div class="footer-status"><div class="status-dot"></div>Available for new opportunities</div>
+</footer>
+
+</body>
+</html>
+
